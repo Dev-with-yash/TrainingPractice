@@ -1,26 +1,26 @@
 package Day1_3Assignments;
 
-public class Task8_a {
-    public static int[] BruteForceSort(int arr[]){
-        for (int i = 0; i < arr.length; i++) {
-            int minIndex = i;
-            for (int j = i+1; j < arr.length ; j++) {
-                if (arr[j] < arr[minIndex])
-                    minIndex = j;
-            }
-            if(minIndex!=i){
-                int temp=arr[i];
-                arr[i]= arr[minIndex];
-                arr[minIndex]=temp;
-            }
-        }
-        return arr;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Task8 {
+    public static int[] SliceArray(int[] arr, int start, int end){
+        int[] narr = new int[arr.length];
+        if (end + 1 - start >= 0)
+            System.arraycopy(arr, start, narr, start, end + 1 - start);
+        return narr;
     }
     public static void main(String[] args) {
-        int[] arr = new int[]{5,2,7,4};
-        int[] arr1 = BruteForceSort(arr);
-        for(int i = 0; i < arr1.length; i++) {
-            System.out.print(arr1[i]+" ");
+        int[] arr = new int[]{1,2,3,4,5,6,7,8};
+        System.out.println("enter start index: ");
+        Scanner sc = new Scanner(System.in);
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+        int[] narr =SliceArray(arr,start,end);
+        for (int j : narr) {
+            if (j != 0) {
+                System.out.print(j + " ");
+            }
         }
     }
 }
