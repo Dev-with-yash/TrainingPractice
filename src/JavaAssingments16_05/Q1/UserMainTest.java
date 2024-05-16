@@ -1,4 +1,6 @@
-package JavaAssingments16_05;
+package JavaAssingments16_05.Q1;
+
+import JavaAssingments16_05.Q1.UserMainCode;
 
 import java.util.Scanner;
 

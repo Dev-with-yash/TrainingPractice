@@ -35,7 +35,7 @@ public class Task9 {
         String str1 = "yaswanth";
         String str2 = "World";
 
-        int length = 4;
+        int length = -2;
 
         String result = getMiddleSubstring(str1, str2, length);
         System.out.println("Middle substring of length " + length + ": " + result);

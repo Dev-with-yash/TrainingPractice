@@ -1,9 +1,8 @@
 package Day1_3Assignments;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Task8 {
+public class Task8_a {
     public static int[] SliceArray(int[] arr, int start, int end){
         int[] narr = new int[arr.length];
         if (end + 1 - start >= 0)

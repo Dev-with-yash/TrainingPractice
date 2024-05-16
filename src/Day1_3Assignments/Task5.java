@@ -9,33 +9,40 @@ package Day1_3Assignments;
 
 import java.util.HashSet;
 public class Task5 {
-    public static boolean hasTwoSum(int[] nums, int target) {
+    public static int[] hasTwoSum(int[] nums, int target) {
 
         HashSet<Integer> seenNumbers = new HashSet<>();
+        int[] arr = new int[2];
 
         for (int num : nums) {
           
             int complement = target - num;
 
             if (seenNumbers.contains(complement)) {
-                return true;
+                arr[0]= complement;
+                arr[1] = target - complement;
             }
             seenNumbers.add(num);
         }
-
-        return false;
+        return arr;
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
-        boolean result = hasTwoSum(nums, target);
-
-        if (result) {
-            System.out.println("There exist two numbers that add up to the target.");
-        } else {
-            System.out.println("There do not exist");
+        int[] nums = {2, 11, 9, 15, 9};
+        int target = 11;
+        int arr[] = new int[2];
+        arr = hasTwoSum(nums, target);
+        for(int num : arr){
+            System.out.println(num);
         }
+
+
+
+//        if (result) {
+//            System.out.println("There exist two numbers that add up to the target.");
+//        } else {
+//            System.out.println("There do not exist");
+//        }
     }
 }
 

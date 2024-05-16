@@ -1,6 +1,6 @@
 package Day1_3Assignments;
 
-public class Task8_a {
+public class Task7_a {
     public static int[] BruteForceSort(int arr[]){
         for (int i = 0; i < arr.length; i++) {
             int minIndex = i;

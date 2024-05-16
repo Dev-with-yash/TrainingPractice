@@ -9,9 +9,13 @@ public class Task2 {
         for (String arg : args) {
             System.out.println(arg);
         }
-            System.out.println("Addition: " + args[0]+args[1]);
+
+
+            System.out.println("Addition: " + (Integer.valueOf(args[0])+Integer.valueOf(args[1])));
             System.out.println("Multiplication: " +(Integer.parseInt(args[0])*Integer.parseInt(args[1])));
             System.out.println("substraction: " + (Integer.parseInt(args[0])-Integer.parseInt(args[1])));
             System.out.println("Division : " + Integer.parseInt(args[0])/Integer.parseInt(args[1]));
     }
 }
+
+

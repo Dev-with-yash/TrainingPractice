@@ -1,15 +1,17 @@
-package JavaAssingments16_05;
+package JavaAssingments16_05.Q1;
 
 public class UserMainCode {
     public static int checksum(int n){
-        int r = 0;
+
         int sum = 0;
         while(n>0){
-            r = n%10;
-            sum = sum + r;
+            int  r = n%10;
+            if (r % 2!=0){
+                sum = sum + r;
+            }
             n = n/10;
         }
-        if (sum % 2 !=0){
+        if (sum % 2 !=0 ){
             return 1;
         }
         else{
